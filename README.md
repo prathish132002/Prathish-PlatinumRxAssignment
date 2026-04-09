@@ -1,90 +1,42 @@
-PlatinumRx Data Analyst Assignment
+# PlatinumRx Data Analyst Assignment - Prathish
 
-This repository contains my completed solution for the PlatinumRx Data Analyst Assessment.
-It includes work across SQL, Spreadsheet Analysis, and Python scripting as per the assignment requirements.
+Hi! This is my submission for the Data Analyst role at PlatinumRx. I have completed all three phases of the assignment, focusing on SQL database management, Spreadsheet data cleaning, and Python logic.
 
-📂 Repository Structure
-Prathish_Assignment/
-│
-├── SQL/
-│   ├── 01_Hotel_Schema_Setup.sql
-│   ├── 02_Hotel_Queries.sql
-│   ├── 03_Clinic_Schema_Setup.sql
-│   └── 04_Clinic_Queries.sql
-│
-├── Spreadsheets/
-│   └── (Google Sheets link provided below)
-│
-├── Python/
-│   ├── 01_Time_Converter.py
-│   └── 02_Remove_Duplicates.py
-│
-└── README.md
+## 📁 What's in this Repo?
 
-🏨 SQL Work Summary
-Hotel Management System
+* **SQL/**: Contains two files. One for the Hotel booking system and another for the Clinic profit/loss analysis.
+* **Python/**: Includes two scripts for time conversion and string cleaning.
+* **Spreadsheet Link**: Access to my data cleaning and pivot table work is below.
 
-Created tables: users, bookings, items, booking_commercials
+---
 
-Wrote analytical SQL queries to identify:
+## 🏨 Phase 1: SQL Logic
+I built schemas for two different systems:
+1.  **Hotel System**: I focused on joining `bookings` with `commercials` to find the total bill amounts. 
+    * *Key Query*: Finding the 2nd highest bill using `LIMIT 1 OFFSET 1`.
+2.  **Clinic System**: I used `strftime` to group data by month so I could subtract expenses from sales to find the monthly profit.
 
-Last room booked
+---
 
-Billing in November 2021
+## 📊 Phase 2: Spreadsheet Analysis
+For this part, I worked with ticket and feedback data.
+* **VLOOKUP**: I used this to pull the `created_at` date into the feedback sheet.
+* **Logic Columns**: I created formulas to check if a ticket was closed on the **same day** and in the **same hour**.
+* **Pivot Tables**: I summarized the data by `outlet_id` to see which locations resolve issues the fastest.
 
-Bills greater than 1000
+🔗 **[View my Google Sheet Here](https://docs.google.com/spreadsheets/d/12UBbD7_CcNufRBJk6Rnpd6d_xwEuZP6KhxSpolKgwNQ/edit?usp=sharing)**
 
-Most/least ordered items per month (using window functions)
+---
 
-Second-highest bill amount
+## 🐍 Phase 3: Python Tasks
+1.  **Time Converter**: A simple script using `//` (floor division) and `%` (modulo) to turn minutes into a readable "X hrs Y mins" format.
+2.  **Duplicate Remover**: I used a `for` loop to build a new string character by character, only adding a letter if it wasn't already there.
 
-Clinic Management System
+---
 
-Created tables: patients, clinic_sales, expenses
+## 💡 What I Learned
+* How to handle `NULL` values or duplicates in SQL using constraints.
+* The importance of data types in Excel when comparing timestamps.
+* Keeping code clean and commented so others can read it easily.
 
-Wrote SQL queries to compute:
-
-Revenue by sales channel
-
-Monthly profit/loss (Revenue – Expenses)
-
-📊 Spreadsheet Analysis (Google Sheets)
-
-Google Sheet includes:
-
-ticket dataset with timestamps
-
-feedbacks dataset with lookup field filled
-
-ticket_created_at populated using VLOOKUP
-
-Helper columns:
-
-same_day → ticket created & closed on same date
-
-same_hour → created & closed within same hour
-
-Pivot tables summarizing outlet-wise statistics:
-
-Count of tickets closed on the same day
-
-Count of tickets closed within the same hour
-
-🔗 Google Sheets Link:
-Paste your link here
-
-🐍 Python Scripts
-1️⃣ Time Converter
-
-File: 01_Time_Converter.py
-Converts a given number of minutes into hours and minutes using integer division and modulo.
-
-2️⃣ Remove Duplicate Characters
-
-File: 02_Remove_Duplicates.py
-Iterates through a string to remove repeated characters while maintaining order.
-
-✅ Status
-
-All assignment components — SQL, Spreadsheets, and Python — have been fully implemented and tested.
-This repository is organized to clearly demonstrate the analytical workflow end-to-end.
+**Thank you for reviewing my work!**
