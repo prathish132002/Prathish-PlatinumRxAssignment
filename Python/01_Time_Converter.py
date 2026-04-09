@@ -1,9 +1,7 @@
-# Time Converter
-# Convert total minutes into hours and minutes
+def convert_minutes(total_minutes):
+    hours = total_minutes // 60
+    minutes = total_minutes % 60
+    return f"{hours} hrs {minutes} minutes"
 
-minutes = int(input(""))
-
-hours = minutes // 60            # integer division
-remaining_minutes = minutes % 60 # modulo operator
-
-print(f"{hours} hrs {remaining_minutes} mins")
+# Test it
+print(convert_minutes(130)) # Expected: 2 hrs 10 minutes
